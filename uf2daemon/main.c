@@ -195,9 +195,9 @@ void enableMSD(int enabled) {
 #ifndef X86
     LOG("%sable MSD", enabled ? "en" : "dis");
     if (enabled)
-        system("/opt/msdon.sh");
+        system("/opt/uf2d/msdon.sh");
     else
-        system("/opt/msdoff.sh");
+        system("/opt/uf2d/msdoff.sh");
     if (!enabled && nbd)
         nbd_ioctl(BLKFLSBUF, 0);
 #else
